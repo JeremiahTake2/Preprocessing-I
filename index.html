@@ -4,9 +4,11 @@
 <head>
   <meta charset="utf-8">
 
-  <title>My Resume</title>
+  <title>Template Resume</title>
 
   <link rel="stylesheet" href="css/index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -14,6 +16,94 @@
 </head>
 
 <body>
-  <h1>My Resume</h1>
+  <header class="SiteHeaderContainer">
+    <h1 class="TopHeader">Resume Template</h1>
+    <nav class="TopNavigationBar">
+      <div class="LinksContainer">
+      <a href="index.html" class="NavLinks">Home</a>
+      <a href="#Btn" class="NavLinks">Skills</a>
+      <a href="#History" class="NavLinks">History</a>
+      <a href="#foot" class="NavLinks">Contact</a>
+    </nav>
+  </header>
+
+  <section class="WelcomeContainer">
+    <img src="imgs/circleWelcomeImg.png" alt="Template Img. Replace this with your own." class="WelcomeImg">
+    <h2 class="WelcomeHeader">Jeremiahs Template - Web Dev</h2>
+    <h3 class="WelcomeSubHeader">Beautiful Resume Template Made With ♥</h3>
+    <p class="WelcomeParagraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis dolore placeat culpa sequi asperiores consectetur cupiditate vero numquam quia magni eos, maxime, ut quaerat soluta quibusdam error expedita hic minus.</p>
+    <div id="Btn" class="WelcomeButton">
+      <a href="#Btn" class="ButtonLink">Scroll Down</a>
+    </div>
+  </section>
+
+  <section id="Skills" class="SkillsSection">
+    <div class="IntroContainer">
+    <h2 class="IntroHeader">The Intro..</h2>
+    <p class="IntroParagraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione itaque doloribus cumque, nemo obcaecati vel tempore facere adipisci ex. Impedit ab provident adipisci suscipit, pariatur beatae corporis error enim labore?</p>
+  </div>
+
+  <div class="SkillsContainer">
+    <h2 class="SkillsHeader">My Skills:</h2>
+    <div class="SkillsListContainer">
+    <li class="SkillsListCSS">CSS</li>
+    <li class="SkillsListAdd">WEB UI, InGame UI.</li>
+    <li class="SkillsListHTML">HTML</li>
+    <li class="SkillsListAdd">Front end web development.</li>
+    <li class="SkillsListLUA">LUA</li>
+    <li class="SkillsListAdd">Basic FiveM Script Writing</li>
+  </div>
+  </div>
+  </section>
+</div>
+  <section class="WorkHistoryContainer">
+    <h2 id="History" class="WorkHistoryHeader">Work History..</h2>
+
+    <div class="WorkHistoryColumnContainer">
+      <table style="width:100%"> 
+        <tr> 
+            <th class="Years Top">Years</th> 
+            <th class="Company Top">Company</th> 
+            <th class="JobTitle Top">Job Title</th>
+            <th class="JobDescription Top">Job Description</th>  
+        </tr> 
+        <tr> 
+            <td class="Years Color1">1</td> 
+            <td class="Company Color1">Apollo Space Station</td> 
+            <td class="JobTitle Color1">Ui Developer</td>
+            <td class="JobDescription Color1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur dignissimos, sed suscipit vel laborum consectetur ratione, sunt voluptatem animi, iste at nemo reiciendis alias! In blanditiis maxime quaerat dolores autem?</td> 
+        </tr> 
+        <tr> 
+            <td class="Years ">5</td> 
+            <td class="Company">McNastys Development</td> 
+            <td class="JobTitle">Model Developer</td>
+            <td class="JobDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur dignissimos, sed suscipit vel laborum consectetur ratione, sunt voluptatem animi, iste at nemo reiciendis alias! In blanditiis maxime quaerat dolores autem?</td> 
+        </tr> 
+        <tr> 
+            <td class="Years Color1">6</td> 
+            <td class="Company Color1">Boings Development</td> 
+            <td class="JobTitle Color1">Texture Developer</td>
+            <td class="JobDescription Color1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur dignissimos, sed suscipit vel laborum consectetur ratione, sunt voluptatem animi, iste at nemo reiciendis alias! In blanditiis maxime quaerat dolores autem?</td> 
+        </tr> 
+    </table> 
+    </div>
+  </section>
+  <div class="Spacer"></div>
+
+  <section id="foot" class="Footer">
+    <h2 class="FooterHeader">Made by Jeremiah Lampher ©</h2>
+    <nav class="BottomNavigationBar">
+      <div class="LinksContainer">
+        <a href="index.html" class="NavLinksBottom">Home</a>
+        <a href="#Btn" class="NavLinksBottom">Skills</a>
+        <a href="#History" class="NavLinksBottom">History</a>
+        <a href="#foot" class="NavLinksBottom">Contact</a>
+    </nav>
+    <div class="ContactList">
+      <li class="ContactlistItem">Phone: 913-587-8945</li>
+      <li class="ContactlistItem">Email: Jeremiahlampher1@gmail.com</li>
+      <li class="ContactlistItem">Discord: Apollo#9846</li>
+    </div>
+  </section>
 </body>
 </html>
