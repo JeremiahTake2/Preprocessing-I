@@ -4,56 +4,475 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
+/* SETUP STYLES */
 /* Set every element's box-sizing to border-box */
+
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
+  }
+  
+  html,
+  body {
+	height: 100%;
+  }
+  
+  body {
+	font-family: @mainFont;
+	margin: 0 10%;
+  }
+
+
+
+// Vars ⏺
+@mainFont: "Baloo Paaji 2", cursive;
+@GreyWhiteColor: gainsboro;
+
+//  Mixins ⏺
+.LinkFix() {
+  text-decoration: none;
+  color: black;
 }
 
-html, body {
-    height: 100%;
+.FontBold() {
+  font-size: 20px;
+  font-weight: bold;
 }
 
+
+// Hovers ⏺
+.NavLinks:hover {
+	border-bottom: 1px solid black;
+	background-color: rgb(165, 165, 165);
+}
+
+.NavLinksBottom:hover {
+	border-bottom: 1px solid black;
+  }
+
+
+
+// Header Styles ⛔
+.NavLinks {
+	border-top: 1px solid black;
+	padding-left: 1%;
+}
+
+.SiteHeaderContainer {
+  display: flex;
+  background-color: @GreyWhiteColor;
+  height: 5vh;
+  align-items: center;
+
+  .TopHeader {
+    // StyleHelp
+    // border: 1px solid red;
+
+    padding-left: 5%;
+    font-size: 25px;
+    text-align: left;
+    width: 20%;
+  }
+
+  .TopNavigationBar {
+    // StyleHelp
+    // border: 1px solid palegreen;
+
+    font-size: 20px;
+    text-align: right;
+    width: 80%;
+
+    a {
+      .LinkFix();
+      padding-right: 1%;
+    }
+  }
+}
+
+// Welcome Styles ⛔
+
+.WelcomeContainer {
+  background-color: rgba(0, 0, 0, 0.562);
+  color: gainsboro;
+  height: 100vh;
+  border-bottom: 1px solid black;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+
+  img {
+    // StyleHelp
+    // border: 1px solid green;
+
+    padding-top: 5%;
+    padding-left: 5%;
+    width: 35%;
+  }
+}
+
+.WelcomeHeader {
+  // StyleHelp
+  // border: 1px solid greenyellow;
+
+  padding-left: 5%;
+  font-size: 40px;
+}
+
+.WelcomeSubHeader {
+  // StyleHelp
+  //  border: 1px solid green;
+
+  margin: 0% 5%;
+  font-size: 20px;
+  padding-bottom: 1%;
+  border-bottom: 2px solid grey;
+}
+
+.WelcomeParagraph {
+  padding-top: 2%;
+  padding-bottom: 2%;
+  margin: 0% 5%;
+  width: 80%;
+}
+
+.ButtonLink {
+  // StyleHelp
+  // border: 1px solid greenyellow;
+
+  .LinkFix();
+  margin: 0% 5%;
+  color: white;
+  border: 1px solid gray;
+  background-color: gainsboro;
+  border-radius: 5px;
+  .FontBold();
+  padding: 0% 1%;
+}
+
+// Skills Styles ⛔
+.SkillsSection {
+  // StyleHelp
+  // background-color: green;
+
+  display: flex;
+  justify-content: space-evenly;
+  height: 40vh;
+}
+
+.IntroHeader {
+  // StyleHelp
+  // border: 1px solid green;
+
+  padding-top: 2%;
+  padding-bottom: 1%;
+  width: 100%;
+  font-size: 30px;
+}
+
+.IntroParagraph {
+  width: 80%;
+  font-size: 20px;
+}
+
+.SkillsContainer {
+  // StyleHelp
+  // border: 1px solid greenyellow;
+  width: 50%;
+}
+
+.SkillsHeader {
+  // StyleHelp
+  // border: 1px solid greenyellow;
+
+  font-size: 30px;
+  width: 100%;
+  padding-top: 10%;
+  padding-bottom: 2%;
+}
+
+.SkillsListCSS {
+  list-style-type: none;
+  font-size: 20px;
+  padding: 2% 1%;
+}
+
+.SkillsListHTML {
+  list-style-type: none;
+  font-size: 20px;
+  padding: 2% 1%;
+  border-top: 1px solid gainsboro;
+}
+
+.SkillsListLUA {
+  list-style-type: none;
+  font-size: 20px;
+  padding: 2% 1%;
+  border-top: 1px solid gainsboro;
+}
+
+.SkillsListAdd {
+  list-style-type: none;
+  font-size: 15px;
+  padding: 2% 5%;
+}
+
+.SkillsListContainer {
+  border: 1px solid gainsboro;
+}
+
+// Work History Styles ⛔
+.WorkHistoryHeader {
+  font-size: 30px;
+  padding-bottom: 2%;
+}
+
+.WorkHistoryColumnContainer {
+  // StyleHelp
+  // border: 1px solid greenyellow;
+
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  list-style-type: none;
+}
+
+.Top {
+	text-align: center;
+	width: 5%;
+	font-weight: bold;
+	text-decoration: underline;
+	border: 1px solid gainsboro;
+  }
+
+.Color1 {
+	background-color: rgba(218, 218, 218, 0.596);
+}
+
+.Years {
+	text-align: center;
+	width: 5%;
+	font-weight: bold;
+	border: 1px solid gainsboro;
+  }
+
+.Company {
+	width: 10%;
+	border: 1px solid gainsboro;
+	text-align: center;
+}
+
+.JobTitle {
+	width: 10%;
+	text-align: center;
+	border: 1px solid gainsboro;
+}
+
+.JobDescription {
+  width: 20%;
+  padding: 1% 2%;
+  border: 1px solid gainsboro;
+}
+
+
+table {
+	th {
+		text-align: center;
+	}
+}
+
+
+// Footer Styles ⛔
+.Spacer {
+	padding-bottom: 5%;
+	height: 5vh;
+}
+
+.Footer {
+	text-align: center;
+	background-color: gray;
+	height: 15vh;
+
+	.FooterHeader {
+		padding-top: 2%;
+		padding-bottom: 1%;
+		font-size: 20px;
+	}
+}
+.BottomNavigationBar {
+	padding-bottom: 5%;
+}
+
+.NavLinksBottom {
+	.LinkFix();
+	padding: 0% 2%;
+	border-bottom: 1px solid gainsboro;
+  }
+
+  .ContactList {
+	  display: flex;
+	  list-style-type: none;
+
+	  .ContactlistItem {
+		padding: 0% 2%;
+	  }
+  }
+
+
+
+  @media (Max-width: 500px) {
+    .ButtonLink {
+        visibility: hidden;
+
+      }
+
+          // Skills Styles ⛔
+    .SkillsSection {
+      height: 25vh;
+
+    }
+
+    .Footer {
+      text-align: center;
+      height: 10vh;
+    }   
+    
+    .ContactList {
+      display: flex;
+      flex-direction: column;
+      list-style-type: none;
+    }
+      .ContactlistItem {
+      padding: 0% 2%;
+      }
+
+      .WelcomeContainer {
+        color: gainsboro;
+        height: 30vh;
+        border-bottom: 1px solid black;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+      }
+}
