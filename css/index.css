@@ -175,7 +175,7 @@ body {
 .WelcomeContainer {
   background-color: rgba(0, 0, 0, 0.562);
   color: gainsboro;
-  height: 100vh;
+  height: 50vh;
   border-bottom: 1px solid black;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -335,4 +335,31 @@ table th {
 }
 .ContactList .ContactlistItem {
   padding: 0% 2%;
+}
+@media (Max-width: 500px) {
+  .ButtonLink {
+    visibility: hidden;
+  }
+  .SkillsSection {
+    height: 25vh;
+  }
+  .Footer {
+    text-align: center;
+    height: 10vh;
+  }
+  .ContactList {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+  }
+  .ContactlistItem {
+    padding: 0% 2%;
+  }
+  .WelcomeContainer {
+    color: gainsboro;
+    height: 30vh;
+    border-bottom: 1px solid black;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
 }
